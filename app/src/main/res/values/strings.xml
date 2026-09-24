@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SmartPantryManager</string>
+    <string name="edit_item">Edit item</string>
+    <string name="delete_item">Delete item</string>
 </resources>
