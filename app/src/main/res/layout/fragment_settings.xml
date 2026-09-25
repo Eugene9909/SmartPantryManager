@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
+        android:text="@string/settings_title"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="24dp" />
@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Preferences"
+        android:text="@string/settings_preferences"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp" />
@@ -25,14 +25,14 @@
         android:id="@+id/switchExpiringAlerts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Expiring soon alerts"
+        android:text="@string/settings_expiring_alerts"
         android:textSize="16sp"
         android:layout_marginBottom="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About"
+        android:text="@string/settings_about"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="24dp"
@@ -41,7 +41,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Smart Pantry Manager v1.0"
+        android:text="@string/settings_app_version"
         android:textSize="16sp"
         android:textColor="#666666" />
 </LinearLayout>

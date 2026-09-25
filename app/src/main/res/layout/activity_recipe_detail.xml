@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ingredients"
+            android:text="@string/recipe_detail_ingredients"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Method"
+            android:text="@string/recipe_detail_method"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
