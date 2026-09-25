@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Units used for both pantry items and recipe ingredients, so they line
+        up for matching. If your project already has a res/values/arrays.xml,
+        merge this <string-array> into it instead of overwriting the file.
+    -->
+    <string-array name="units_array">
+        <item>unit</item>
+        <item>g</item>
+        <item>kg</item>
+        <item>ml</item>
+        <item>l</item>
+    </string-array>
+</resources>
