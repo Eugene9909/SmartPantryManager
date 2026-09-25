@@ -59,11 +59,17 @@ public class PantryAdapter extends RecyclerView.Adapter<PantryAdapter.PantryView
         }
 
         holder.buttonEditItem.setOnClickListener(v -> {
-            if (listener != null) listener.onEditClicked(item);
+            int currentPosition = holder.getBindingAdapterPosition();
+            if (currentPosition != RecyclerView.NO_POSITION && listener != null) {
+                listener.onEditClicked(items.get(currentPosition));
+            }
         });
 
         holder.buttonDeleteItem.setOnClickListener(v -> {
-            if (listener != null) listener.onDeleteClicked(item);
+            int currentPosition = holder.getBindingAdapterPosition();
+            if (currentPosition != RecyclerView.NO_POSITION && listener != null) {
+                listener.onDeleteClicked(items.get(currentPosition));
+            }
         });
     }
 
