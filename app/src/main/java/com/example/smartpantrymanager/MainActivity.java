@@ -3,15 +3,13 @@ package com.example.smartpantrymanager;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.smartpantrymanager.fragments.PantryListFragment;
+import com.example.smartpantrymanager.fragments.SettingsFragment;
+import com.example.smartpantrymanager.fragments.SuggestedRecipesFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-/**
- * Single host Activity. For now it just loads PantryListFragment into the
- * fragment container. Once SuggestedRecipesFragment and SettingsFragment
- * exist, this will grow a BottomNavigationView to switch between all three
- * (see the project plan) — no point adding that with only one destination yet.
- */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,11 +17,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            Fragment selectedFragment = null;
+            int itemId = item.getItemId();
+            
+            if (itemId == R.id.nav_pantry) {
+                selectedFragment = new PantryListFragment();
+            } else if (itemId == R.id.nav_recipes) {
+                selectedFragment = new SuggestedRecipesFragment();
+            } else if (itemId == R.id.nav_settings) {
+                selectedFragment = new SettingsFragment();
+            }
+            
+            if (selectedFragment != null) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, selectedFragment)
+                        .commit();
+                return true;
+            }
+            return false;
+        });
+
         if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragmentContainer, new PantryListFragment())
-                    .commit();
+            bottomNavigation.setSelectedItemId(R.id.nav_pantry);
         }
     }
 }
