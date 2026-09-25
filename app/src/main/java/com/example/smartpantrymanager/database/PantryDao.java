@@ -6,10 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.smartpantrymanager.model.PantryItem;
+import com.example.smartpantrymanager.util.IngredientNormalizer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Data-access object for the pantry_items table.
@@ -29,19 +29,11 @@ public class PantryDao {
     }
 
     /**
-     * Naive normalization: lowercase, trim, strip a single trailing "s" or "es"
-     * for a basic singular form. Good enough for common cases like
-     * "Tomatoes" -> "tomato", "Onions" -> "onion". Refined further in
-     * IngredientNormalizer once that's wired in for recipe matching.
+     * Normalization now lives in IngredientNormalizer so the same rules apply
+     * consistently everywhere a name is normalized (here, and in MatchingEngine).
      */
     private String normalize(String rawName) {
-        String s = rawName.trim().toLowerCase(Locale.ROOT);
-        if (s.endsWith("es") && s.length() > 3) {
-            s = s.substring(0, s.length() - 2);
-        } else if (s.endsWith("s") && !s.endsWith("ss") && s.length() > 2) {
-            s = s.substring(0, s.length() - 1);
-        }
-        return s;
+        return IngredientNormalizer.normalizeName(rawName);
     }
 
     /** Create: inserts a new pantry item and returns its generated id, or -1 on failure. */
