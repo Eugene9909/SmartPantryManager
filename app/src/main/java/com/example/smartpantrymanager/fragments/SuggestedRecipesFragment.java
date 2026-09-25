@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smartpantrymanager.R;
+import com.example.smartpantrymanager.activities.RecipeDetailActivity;
 import com.example.smartpantrymanager.adapters.RecipeAdapter;
 import com.example.smartpantrymanager.database.PantryDao;
 import com.example.smartpantrymanager.database.RecipeDao;
@@ -58,9 +59,7 @@ public class SuggestedRecipesFragment extends Fragment {
         recipeDao = new RecipeDao(requireContext());
 
         adapter = new RecipeAdapter(suggestedRecipes, recipe -> {
-            // TODO: launch RecipeDetailActivity (next step).
-            Toast.makeText(requireContext(),
-                    "Recipe detail screen coming in the next step", Toast.LENGTH_SHORT).show();
+            startActivity(RecipeDetailActivity.newIntent(requireContext(), recipe.getId()));
         });
 
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));

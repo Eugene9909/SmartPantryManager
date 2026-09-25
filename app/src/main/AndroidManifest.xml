@@ -24,6 +24,8 @@
 
         <activity android:name=".activities.AddEditIngredientActivity"
             android:windowSoftInputMode="adjustResize" />
+
+        <activity android:name=".activities.RecipeDetailActivity" />
     </application>
 
 </manifest>
