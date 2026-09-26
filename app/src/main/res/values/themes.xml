@@ -3,6 +3,11 @@
     <style name="Base.Theme.SmartPantryManager" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/pantry_primary</item>
+        <item name="colorPrimaryDark">@color/pantry_primary_dark</item>
+        <item name="colorAccent">@color/pantry_accent</item>
+        <item name="android:windowBackground">@color/pantry_background</item>
+        <item name="colorSecondaryContainer">@color/pantry_accent</item>
     </style>
 
     <style name="Theme.SmartPantryManager" parent="Base.Theme.SmartPantryManager" />

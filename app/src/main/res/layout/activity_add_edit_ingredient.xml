@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/pantry_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,6 +100,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:backgroundTint="@color/pantry_primary"
+            android:textColor="@android:color/white"
             android:text="Save" />
 
     </LinearLayout>

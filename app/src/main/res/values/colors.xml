@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-</resources>
+    <!--
+        Smart Pantry Manager palette \u2014 warm/kitchen-inspired.
+        If you already have a res/values/colors.xml, merge these into it
+        rather than overwriting (keep any existing colors you still use).
+    -->
+    <color name="pantry_primary">#4C7A57</color>       <!-- herb green -->
+    <color name="pantry_primary_dark">#365A3E</color>
+    <color name="pantry_accent">#E8A94B</color>         <!-- warm amber, used for the FAB -->
+    <color name="pantry_background">#FBF7F0</color>     <!-- warm cream, screen backgrounds -->
+    <color name="pantry_surface">#FFFFFF</color>        <!-- cards / rows -->
+    <color name="pantry_text_primary">#2E2B26</color>
+    <color name="pantry_text_secondary">#8A8378</color>
+    <color name="pantry_divider">#E8E2D6</color>
+    </resources>

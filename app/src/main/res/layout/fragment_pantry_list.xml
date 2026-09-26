@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/pantry_background">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPantryList"
@@ -32,6 +33,8 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="24dp"
         android:contentDescription="Add ingredient"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/pantry_accent"
+        app:tint="@android:color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
