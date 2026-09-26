@@ -12,6 +12,7 @@ import com.example.smartpantrymanager.R;
 import com.example.smartpantrymanager.database.RecipeDao;
 import com.example.smartpantrymanager.model.Recipe;
 import com.example.smartpantrymanager.model.RecipeIngredient;
+import com.google.android.material.appbar.MaterialToolbar;
 
 /**
  * Recipe Detail screen (Section 2.2): shows the full ingredient list and
@@ -50,11 +51,13 @@ public class RecipeDetailActivity extends AppCompatActivity {
             return;
         }
 
-        TextView textName = findViewById(R.id.textDetailRecipeName);
         TextView textIngredients = findViewById(R.id.textDetailIngredients);
         TextView textSteps = findViewById(R.id.textDetailSteps);
+        MaterialToolbar toolbar = findViewById(R.id.toolbarRecipeDetail);
 
-        textName.setText(recipe.getName());
+        toolbar.setTitle(recipe.getName());
+        toolbar.setNavigationOnClickListener(v -> finish());
+
         textIngredients.setText(formatIngredients(recipe));
         textSteps.setText(recipe.getSteps());
     }
