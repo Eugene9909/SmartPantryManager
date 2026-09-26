@@ -2,14 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".activities.RecipeDetailActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="24dp">
 
         <TextView
             android:id="@+id/textDetailRecipeName"
@@ -17,41 +16,41 @@
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"
             tools:text="Cheese Omelette" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/recipe_detail_ingredients"
+            android:layout_marginTop="24dp"
+            android:text="Ingredients"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textDetailIngredientsList"
+            android:id="@+id/textDetailIngredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:layout_marginTop="8dp"
             android:lineSpacingExtra="4dp"
-            android:layout_marginBottom="24dp"
-            tools:text="• 2 eggs\n• 30g cheese\n• 10g butter\n• 1 pinch salt" />
+            android:textSize="16sp"
+            tools:text="&#8226; 2 egg\n&#8226; 30 g cheese\n&#8226; 10 g butter\n&#8226; 1 pinch salt" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/recipe_detail_method"
+            android:layout_marginTop="24dp"
+            android:text="Method"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textDetailSteps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:layout_marginTop="8dp"
             android:lineSpacingExtra="4dp"
-            tools:text="1. Whisk eggs with a pinch of salt.\n2. Melt butter in a pan over medium heat.\n3. Pour in eggs, sprinkle cheese, fold when set." />
+            android:textSize="16sp"
+            tools:text="1. Whisk eggs.\n2. Melt butter.\n3. Fold in cheese." />
 
     </LinearLayout>
 </ScrollView>
