@@ -14,7 +14,7 @@ import java.util.List;
  * Data-access object for recipes and recipe_ingredients.
  * Read-only by design: recipes are seeded once in DatabaseHelper and the
  * app never lets the user create/edit/delete them (only pantry items get
- * full CRUD, per Section 2.2 — recipes are a fixed collection).
+ * full CRUD, per Section 2.2 - recipes are a fixed collection).
  */
 public class RecipeDao {
 

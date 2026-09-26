@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.example.smartpantrymanager.R;
 
 /**
- * Settings screen (Section 2.2's "settings or profile screen" requirement).
+ * Settings screen "settings or profile screen" requirement).
  * Two preferences, both persisted via SharedPreferences so they survive
  * app restarts:
  *  - Expiring-soon alerts toggle.

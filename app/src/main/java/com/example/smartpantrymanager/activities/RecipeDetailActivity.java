@@ -15,9 +15,9 @@ import com.example.smartpantrymanager.model.RecipeIngredient;
 import com.google.android.material.appbar.MaterialToolbar;
 
 /**
- * Recipe Detail screen (Section 2.2): shows the full ingredient list and
+ * Recipe Detail screen shows the full ingredient list and
  * method for a single recipe, opened via an Intent extra carrying the
- * recipe's id (Section 3.1's "correct use of Intents to pass data").
+ * recipe's id "correct use of Intents to pass data").
  */
 public class RecipeDetailActivity extends AppCompatActivity {
 

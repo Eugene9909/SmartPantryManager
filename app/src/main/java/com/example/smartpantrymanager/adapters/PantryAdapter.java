@@ -86,7 +86,7 @@ public class PantryAdapter extends RecyclerView.Adapter<PantryAdapter.PantryView
         return String.valueOf(quantity);
     }
 
-    /** Replaces the adapter's data set (e.g. after a CRUD change) and refreshes the list. */
+    /** Replaces the adapter's data set (example: after a CRUD change) and refreshes the list. */
     public void updateData(List<PantryItem> newItems) {
         items.clear();
         items.addAll(newItems);

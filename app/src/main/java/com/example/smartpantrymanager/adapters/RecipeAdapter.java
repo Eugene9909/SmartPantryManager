@@ -59,7 +59,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         return recipes.size();
     }
 
-    /** Replaces the adapter's data set (e.g. after the pantry changes) and refreshes the list. */
+    /** Replaces the adapter's data set (example: after the pantry changes) and refreshes the list. */
     public void updateData(List<Recipe> newRecipes) {
         recipes.clear();
         recipes.addAll(newRecipes);

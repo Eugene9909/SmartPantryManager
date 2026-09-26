@@ -21,10 +21,10 @@ import java.util.Calendar;
 import java.util.Locale;
 
 /**
- * Add/Edit Ingredient screen (Section 2.2). Handles both modes depending on
+ * Add/Edit Ingredient screen Handles both modes depending on
  * whether EXTRA_ITEM_ID was passed in:
- *  - No extra (or -1)  -> "Add" mode, creates a new pantry item.
- *  - Valid id passed    -> "Edit" mode, loads and updates the existing item.
+ *  - No extra (or -1)  then "Add" mode, creates a new pantry item.
+ *  - Valid id passed   then "Edit" mode, loads and updates the existing item.
  *
  * Validation: name must not be blank, quantity must be a positive number.
  * Expiry date is optional.
@@ -130,7 +130,7 @@ public class AddEditIngredientActivity extends AppCompatActivity {
     }
 
     /**
-     * Validates the form and, if valid, saves (insert or update depending on mode).
+     * Validates the form and, if valid, saves (insert or update depending on the mode).
      * Returns early on the first validation failure, showing an inline error.
      */
     private void attemptSave() {

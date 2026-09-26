@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The "Suggested Recipes" screen (Section 2.2): runs MatchingEngine's
+ * The "Suggested Recipes" screen: runs MatchingEngine's
  * strict-matching rule against the current pantry and lists only the
  * recipes the user can make right now. Shows a clear empty-state message
  * when zero recipes match, rather than a blank screen.
@@ -43,7 +43,7 @@ public class SuggestedRecipesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                              @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_suggested_recipes, container, false);
     }
 
